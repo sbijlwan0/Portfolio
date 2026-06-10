@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/sunil-portfolio",
+            "outputPath": "dist/Portfolio",
             "index": "index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -24,13 +24,11 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
-                }
-              ],
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "500kb",
+                "maximumError": "1mb"
+              }],
               "outputHashing": "all"
             },
             "development": {
@@ -44,8 +42,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": { "buildTarget": "sunil-portfolio:build:production" },
-            "development": { "buildTarget": "sunil-portfolio:build:development" }
+            "production": {
+              "buildTarget": "sunil-portfolio:build:production"
+            },
+            "development": {
+              "buildTarget": "sunil-portfolio:build:development"
+            }
           },
           "defaultConfiguration": "development"
         }

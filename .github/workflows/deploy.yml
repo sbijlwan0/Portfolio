@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/sunil-portfolio/browser'
+          path: './dist/Portfolio/browser'
 
   deploy:
     environment:
