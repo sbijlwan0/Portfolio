@@ -1,0 +1,94 @@
+.exp-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 48px;
+}
+
+/* Tab list */
+.tab-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.tab-btn {
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 2px solid var(--border);
+  padding: 14px 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color .2s, background .2s;
+  height: 52px;
+}
+.tab-btn:hover { color: var(--cyan); background: var(--cyan-dim); }
+.tab-btn.active { color: var(--cyan); }
+
+.tab-indicator {
+  position: absolute;
+  left: -2px;
+  width: 2px;
+  height: 52px;
+  background: var(--cyan);
+  transition: top .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* Panel */
+.exp-panel { padding-top: 4px; }
+
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.exp-company { color: var(--cyan); }
+
+.exp-meta {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.exp-sep { color: var(--border); }
+
+.exp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.tag {
+  background: rgba(91,79,232,0.12);
+  border: 1px solid rgba(91,79,232,0.25);
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.exp-points { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+.exp-points li {
+  display: flex;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+.bullet { color: var(--cyan); flex-shrink: 0; margin-top: 3px; }
+
+@media (max-width: 768px) {
+  .exp-layout { grid-template-columns: 1fr; gap: 24px; }
+  .tab-list { flex-direction: row; overflow-x: auto; }
+  .tab-btn { border-left: none; border-bottom: 2px solid var(--border); white-space: nowrap; }
+  .tab-indicator { display: none; }
+  .tab-btn.active { border-bottom-color: var(--cyan); }
+}

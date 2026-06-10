@@ -1,0 +1,13 @@
+<section class="section domains-section">
+  <p class="section-label">04. Domains</p>
+  <h2 class="section-title">Industries I've Shaped</h2>
+  <div class="section-divider"></div>
+
+  <div class="domains-grid">
+    <div class="domain-card" *ngFor="let d of domains">
+      <span class="domain-icon">{{d.icon}}</span>
+      <h3 class="domain-name">{{d.name}}</h3>
+      <p class="domain-desc">{{d.desc}}</p>
+    </div>
+  </div>
+</section>

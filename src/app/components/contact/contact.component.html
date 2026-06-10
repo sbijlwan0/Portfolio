@@ -1,0 +1,26 @@
+<section class="section contact-section">
+  <p class="section-label">05. Contact</p>
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="section-divider"></div>
+
+  <div class="contact-layout">
+    <div class="contact-left">
+      <p class="contact-intro">
+        I'm currently open to new opportunities. Whether you have a project in mind,
+        a question, or just want to connect — my inbox is always open.
+      </p>
+      <a href="mailto:sbijlwan0@gmail.com" class="contact-cta">Say Hello →</a>
+    </div>
+
+    <div class="contact-links">
+      <a class="contact-link" *ngFor="let l of links" [href]="l.href" target="_blank">
+        <span class="link-icon">{{l.icon}}</span>
+        <span class="link-body">
+          <span class="link-label">{{l.label}}</span>
+          <span class="link-value">{{l.value}}</span>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="section skills-section">
+  <p class="section-label">02. Skills</p>
+  <h2 class="section-title">Tech Stack</h2>
+  <div class="section-divider"></div>
+
+  <div class="skills-grid">
+    <div class="skill-group" *ngFor="let group of skillGroups">
+      <h3 class="group-title">
+        <span class="group-icon">{{group.icon}}</span>
+        {{group.category}}
+      </h3>
+      <div class="skill-tags">
+        <span class="tag" *ngFor="let skill of group.skills">{{skill}}</span>
+      </div>
+    </div>
+  </div>
+</section>

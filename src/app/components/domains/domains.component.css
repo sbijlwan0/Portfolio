@@ -1,0 +1,39 @@
+.domains-section {
+  background: linear-gradient(to bottom, transparent, rgba(100,255,218,0.02), transparent);
+}
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.domain-card {
+  background: var(--navy-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 24px;
+  transition: border-color .3s, transform .3s, box-shadow .3s;
+  cursor: default;
+}
+.domain-card:hover {
+  border-color: rgba(100,255,218,0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(100,255,218,0.06);
+}
+.domain-icon { font-size: 28px; display: block; margin-bottom: 16px; }
+.domain-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+.domain-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) { .domains-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { .domains-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { .domains-grid { grid-template-columns: 1fr; } }

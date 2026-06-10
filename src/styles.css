@@ -1,0 +1,86 @@
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  --navy:       #0A0F1E;
+  --navy-light: #0D1526;
+  --navy-card:  #111827;
+  --indigo:     #5B4FE8;
+  --indigo-dim: #3D3499;
+  --cyan:       #64FFDA;
+  --cyan-dim:   rgba(100,255,218,0.12);
+  --white:      #E8EDF5;
+  --muted:      #8892B0;
+  --border:     rgba(100,255,218,0.08);
+  --glow:       0 0 40px rgba(91,79,232,0.25);
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--indigo); border-radius: 2px; }
+
+a { color: var(--cyan); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .75; }
+
+::selection { background: var(--indigo); color: var(--white); }
+
+/* ─── Utility ───────────────────────────────────────────────────── */
+.section {
+  padding: 100px 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--cyan);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.section-divider {
+  width: 48px;
+  height: 2px;
+  background: var(--indigo);
+  margin-bottom: 48px;
+}
+
+/* Fade-in animation for sections */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .6s ease both; }
+
+@media (max-width: 768px) {
+  .section { padding: 64px 20px; }
+}

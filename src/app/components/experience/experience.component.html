@@ -1,0 +1,42 @@
+<section class="section">
+  <p class="section-label">03. Experience</p>
+  <h2 class="section-title">Where I've Worked</h2>
+  <div class="section-divider"></div>
+
+  <div class="exp-layout">
+    <!-- Tab list -->
+    <div class="tab-list">
+      <button
+        class="tab-btn"
+        *ngFor="let job of jobs; let i = index"
+        [class.active]="activeIndex === i"
+        (click)="select(i)">
+        {{job.company}}
+      </button>
+      <div class="tab-indicator" [style.top.px]="activeIndex * 52"></div>
+    </div>
+
+    <!-- Panel -->
+    <div class="exp-panel">
+      <div class="exp-header">
+        <h3 class="exp-role">
+          {{jobs[activeIndex].role}}
+          <span class="exp-company">&#64; {{jobs[activeIndex].company}}</span>
+        </h3>
+        <p class="exp-meta">
+          <span class="exp-period">{{jobs[activeIndex].period}}</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-location">{{jobs[activeIndex].location}}</span>
+        </p>
+        <div class="exp-tech">
+          <span class="tag" *ngFor="let t of jobs[activeIndex].tech">{{t}}</span>
+        </div>
+      </div>
+      <ul class="exp-points">
+        <li *ngFor="let p of jobs[activeIndex].points">
+          <span class="bullet">▹</span> {{p}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

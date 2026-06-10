@@ -1,0 +1,20 @@
+<nav [class.scrolled]="scrolled">
+  <div class="nav-inner">
+    <a class="logo" href="#home">SB<span class="dot">.</span></a>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li *ngFor="let link of navLinks; let i = index">
+        <a [href]="link.href" (click)="close()">
+          <span class="num">0{{i+1}}.</span> {{link.label}}
+        </a>
+      </li>
+      <li>
+        <a class="resume-btn" href="assets/resume.pdf" target="_blank" (click)="close()">Resume</a>
+      </li>
+    </ul>
+
+    <button class="hamburger" (click)="toggle()" [class.open]="menuOpen" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
