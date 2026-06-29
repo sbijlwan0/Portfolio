@@ -8,6 +8,11 @@ import { Component } from '@angular/core';
 export class SkillsComponent {
   skillGroups = [
     {
+      category: 'AI / LLM',
+      icon: '⬡',
+      skills: ['LLM Fine-tuning', 'Chatbot Development', 'AI-driven Testing', 'Prompt Engineering']
+    },
+    {
       category: 'Frontend',
       icon: '⬡',
       skills: ['Angular', 'ReactJs', 'VueJs', 'EmberJs', 'TypeScript', 'JavaScript', 'HTML/CSS']

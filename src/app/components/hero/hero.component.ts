@@ -13,6 +13,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     'Full Stack Developer',
     'Angular Specialist',
     'Node.js Engineer',
+    'AI/LLM Integration',
     'WebSocket Architect',
     'API Performance Expert',
   ];

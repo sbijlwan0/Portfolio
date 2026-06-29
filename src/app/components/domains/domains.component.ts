@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class DomainsComponent {
   domains = [
     { name: 'Banking',                    icon: '🏦', desc: 'ISO-compliant banking features, API security, and automated testing at Emirates NBD.' },
+    { name: 'AI / LLM-Powered Chatbots',  icon: '🤖', desc: 'Training and fine-tuning LLMs as banking agents, plus AI-only chatbot testing utilities.' },
     { name: 'SAAS Products (B2B)',         icon: '☁️', desc: 'Multi-role, multi-tenant platforms with secure, scalable architectures.' },
     { name: 'Tour & Travel',              icon: '✈️', desc: 'End-to-end travel websites with Lighthouse performance monitoring.' },
     { name: 'E-Commerce',                 icon: '🛒', desc: 'Parallax scroll sites, product catalogs, Django/Angular hybrid apps.' },

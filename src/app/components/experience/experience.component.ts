@@ -14,8 +14,10 @@ export class ExperienceComponent {
       role: 'Software Engineer (Contract)',
       period: 'July 2025 – Present',
       location: 'Dubai, UAE',
-      tech: ['Node.js', 'Angular', 'Playwright', 'MySQL', 'Redis'],
+      tech: ['Node.js', 'Angular', 'Playwright', 'MySQL', 'Redis', 'LLM/AI'],
       points: [
+        'Developing an AI-powered banking chatbot as a backend developer, training and fine-tuning the underlying LLM to function as a reliable, compliant, and conversational banking agent.',
+        'Built an AI-only chatbot testing utility to validate chatbot behavior at scale, covering motive-driven testing, scenario-based testing, mobile-UI testing, and pressure testing.',
         'Developed features enhancing app usability and user convenience for banking customers.',
         'Optimized legacy features and APIs for efficiency gains across critical banking workflows.',
         'Implemented ISO standards into banking features for compliance and security.',
